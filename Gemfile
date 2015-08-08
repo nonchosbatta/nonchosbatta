@@ -40,7 +40,7 @@ gem 'connection_pool'
 gem 'dalli'
 
 # Features
-# gem 'devise'
+gem 'devise'
 # gem 'pundit'
 
 group :development do
