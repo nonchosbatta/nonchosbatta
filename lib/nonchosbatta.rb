@@ -1,0 +1,2 @@
+module Nonchosbatta
+end

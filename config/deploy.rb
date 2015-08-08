@@ -1,7 +1,7 @@
 lock '3.4.0'
 
-set :repo_url, 'git@github.com:RoxasShadow/svogliato.git'
-set :application, 'svogliato'
+set :repo_url, 'git@github.com:RoxasShadow/nonchosbatta.git'
+set :application, 'nonchosbatta'
 set :user, 'deployer'
 
 set :deploy_to, "/home/#{fetch(:user)}/apps/#{fetch(:application)}"

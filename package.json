@@ -1,12 +1,12 @@
 {
-  "name": "svogliato",
+  "name": "nonchosbatta",
   "version": "1.0.0",
   "description": "Backend for Nonchosbatta",
   "main": "index.js",
   "homepage": "https://github.com/nonchosbatta",
   "repository": {
     "type": "git",
-    "url": "https://github.com/RoxasShadow/svogliato.git"
+    "url": "https://github.com/RoxasShadow/nonchosbatta.git"
   },
   "author": "Giovanni Capuano",
   "license": "MIT",

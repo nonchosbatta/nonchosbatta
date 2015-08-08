@@ -5,24 +5,24 @@ default: &default
 
 test:
   <<: *default
-  database: svogliato_test
+  database: nonchosbatta_test
 
 development:
   <<: *default
-  database: svogliato_development
-  username: svogliato
+  database: nonchosbatta_development
+  username: nonchosbatta
   password:
   host: localhost
   port: 5432
 
 staging:
   <<: *default
-  database: svogliato_staging
+  database: nonchosbatta_staging
   username: deployer
-  password: <%= ENV['SVOGLIATO_DATABASE_PASSWORD'] %>
+  password: <%= ENV['NONCHOSBATTA_DATABASE_PASSWORD'] %>
 
 production:
   <<: *default
-  database: svogliato_production
+  database: nonchosbatta_production
   username: deployer
-  password: <%= ENV['SVOGLIATO_DATABASE_PASSWORD'] %>
+  password: <%= ENV['NONCHOSBATTA_DATABASE_PASSWORD'] %>

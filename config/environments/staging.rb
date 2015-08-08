@@ -54,7 +54,7 @@ Rails.application.configure do
   # Use a different logger for distributed setups.
   # config.logger = ActiveSupport::TaggedLogging.new(SyslogLogger.new)
 
-  config.cache_store = :dalli_store, 'localhost', { namespace: 'Svogliato_v1', pool_size: 5, compress: true }
+  config.cache_store = :dalli_store, 'localhost', { namespace: 'Nonchosbatta_v1', pool_size: 5, compress: true }
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.action_controller.asset_host = 'http://assets.example.com'
