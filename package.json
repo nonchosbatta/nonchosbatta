@@ -1,0 +1,28 @@
+{
+  "name": "svogliato",
+  "version": "1.0.0",
+  "description": "Backend for Nonchosbatta",
+  "main": "index.js",
+  "homepage": "https://github.com/nonchosbatta",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RoxasShadow/svogliato.git"
+  },
+  "author": "Giovanni Capuano",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mozestudio/xpass/issues"
+  },
+  "browserify": {
+    "options": {
+      "browserifyOptions": {
+        "debug": true
+      }
+    }
+  },
+  "dependencies": {
+    "browserify": "~> 6.3",
+    "browserify-incremental": "^1.4.0",
+    "jquery": "^2.1.4"
+  }
+}
