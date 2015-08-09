@@ -1,6 +1,8 @@
 class Episode < ActiveRecord::Base
   belongs_to :show
 
+  has_many :episode_staffers
+
   validates :show_id, :number, presence: true
 
   # Patch for RailsAdmin (RoxasShadow/rails_admin-auto-enum seems not working anymore...)
@@ -17,5 +19,9 @@ class Episode < ActiveRecord::Base
     define_method("#{task}_enum") do
       Nonchosbatta::Episode::STATUSES.map { |status| [status.humanize, status] }
     end
+  end
+
+  def title
+    "#{show.short_title}\##{number}"
   end
 end
