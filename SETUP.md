@@ -24,9 +24,7 @@ postgres=# \du
 
 ## Run
 - `$ bundle install`
-- `$ rake db:create`
-- `$ rake db:migrate`
-- `$ rake db:setup`
+- `$ rake db:create db:migrate db:setup`
 - `$ bundle exec rspec`
 - `$ npm install`
 - `$ bundle exec rails s`
@@ -34,7 +32,7 @@ postgres=# \du
 ## Troubleshooting
 * In OSX you'll probably need to execute the following two commands instead of the plain `$ rvm install rbx-2.5.7`:
 
-`$ brew install llvm`   
+`$ brew install llvm`
 `$ rvm install rbx-2.5.7 -- --llvm-config /usr/local/opt/llvm/bin/llvm-config`
 
 
