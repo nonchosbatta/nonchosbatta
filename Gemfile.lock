@@ -471,6 +471,9 @@ GEM
       tilt (~> 1.1)
     sassy-maps (0.4.0)
       sass (~> 3.3)
+    seed_dump (3.2.2)
+      activerecord (~> 4)
+      activesupport (~> 4)
     selenium-webdriver (2.47.1)
       childprocess (~> 0.5)
       multi_json (~> 1.0)
@@ -563,6 +566,7 @@ DEPENDENCIES
   rspec-rails
   rubysl
   sass-rails (~> 5.0)
+  seed_dump
   selenium-webdriver
   simplecov
   spork-rails

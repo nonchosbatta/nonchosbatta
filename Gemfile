@@ -64,6 +64,7 @@ group :development do
   # gem 'benchmark-ips',      require: false
   gem 'stackprof', platforms: :mri
   gem 'derailed'
+  gem 'seed_dump'
 end
 
 group :development, :test do
