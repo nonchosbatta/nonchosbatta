@@ -1,7 +1,7 @@
 class Episode < ActiveRecord::Base
   belongs_to :show
 
-  has_many :episode_staffers
+  has_many :episode_staffers, dependent: :destroy
 
   validates :show_id, :number, presence: true
 

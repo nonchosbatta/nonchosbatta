@@ -2,6 +2,8 @@ class Show < ActiveRecord::Base
   belongs_to :fansub
   belongs_to :collaboration
 
+  has_many :episodes, dependent: :destroy
+
   enum status: Nonchosbatta::Show::STATUSES
   enum format: Nonchosbatta::Show::FORMATS
 
