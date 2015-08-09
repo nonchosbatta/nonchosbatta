@@ -1,5 +1,6 @@
 class EpisodeStaffer < ActiveRecord::Base
   belongs_to :staffer, class_name: 'User'
+  belongs_to :alias
   belongs_to :episode
 
   enum role: Nonchosbatta::Fansub::ROLES

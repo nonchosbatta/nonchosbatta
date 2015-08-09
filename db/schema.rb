@@ -36,12 +36,14 @@ ActiveRecord::Schema.define(version: 20150809153803) do
 
   create_table "episode_staffers", force: :cascade do |t|
     t.integer  "staffer_id"
-    t.string   "episode_id"
+    t.integer  "alias_id"
+    t.integer  "episode_id"
     t.integer  "role",       default: 0
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
   end
 
+  add_index "episode_staffers", ["alias_id"], name: "index_episode_staffers_on_alias_id", using: :btree
   add_index "episode_staffers", ["episode_id"], name: "index_episode_staffers_on_episode_id", using: :btree
   add_index "episode_staffers", ["role"], name: "index_episode_staffers_on_role", using: :btree
   add_index "episode_staffers", ["staffer_id"], name: "index_episode_staffers_on_staffer_id", using: :btree
@@ -76,7 +78,7 @@ ActiveRecord::Schema.define(version: 20150809153803) do
 
   create_table "fansub_staffers", force: :cascade do |t|
     t.integer  "staffer_id"
-    t.string   "fansub_id"
+    t.integer  "fansub_id"
     t.integer  "role",       default: 0
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
