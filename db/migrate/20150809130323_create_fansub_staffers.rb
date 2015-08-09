@@ -3,7 +3,7 @@ class CreateFansubStaffers < ActiveRecord::Migration
     create_table :fansub_staffers do |t|
       t.integer :staffer_id
       t.string  :fansub_id
-      t.integer :role
+      t.integer :role, default: 0
 
       t.timestamps null: false
     end

@@ -4,13 +4,13 @@ class CreateEpisodes < ActiveRecord::Migration
       t.integer :show_id
       t.integer :number
       t.string  :url
-      t.integer :translation
-      t.integer :editing
-      t.integer :checking
-      t.integer :timing
-      t.integer :typesetting
-      t.integer :encoding
-      t.integer :qchecking
+      t.integer :translation, default: 0
+      t.integer :editing,     default: 0
+      t.integer :checking,    default: 0
+      t.integer :timing,      default: 0
+      t.integer :typesetting, default: 0
+      t.integer :encoding,    default: 0
+      t.integer :qchecking,   default: 0
 
       t.timestamps null: false
     end

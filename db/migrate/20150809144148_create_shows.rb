@@ -6,8 +6,8 @@ class CreateShows < ActiveRecord::Migration
       t.string  :title
       t.string  :short_title
       t.integer :episodes_count
-      t.integer :status
-      t.integer :format
+      t.integer :status, default: 0
+      t.integer :format, default: 0
       t.date    :started_at
       t.date    :ended_at
 

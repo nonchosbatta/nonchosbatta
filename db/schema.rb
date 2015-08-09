@@ -37,9 +37,9 @@ ActiveRecord::Schema.define(version: 20150809153803) do
   create_table "episode_staffers", force: :cascade do |t|
     t.integer  "staffer_id"
     t.string   "episode_id"
-    t.integer  "role"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "role",       default: 0
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   add_index "episode_staffers", ["episode_id"], name: "index_episode_staffers_on_episode_id", using: :btree
@@ -50,15 +50,15 @@ ActiveRecord::Schema.define(version: 20150809153803) do
     t.integer  "show_id"
     t.integer  "number"
     t.string   "url"
-    t.integer  "translation"
-    t.integer  "editing"
-    t.integer  "checking"
-    t.integer  "timing"
-    t.integer  "typesetting"
-    t.integer  "encoding"
-    t.integer  "qchecking"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.integer  "translation", default: 0
+    t.integer  "editing",     default: 0
+    t.integer  "checking",    default: 0
+    t.integer  "timing",      default: 0
+    t.integer  "typesetting", default: 0
+    t.integer  "encoding",    default: 0
+    t.integer  "qchecking",   default: 0
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
   end
 
   add_index "episodes", ["number"], name: "index_episodes_on_number", using: :btree
@@ -77,9 +77,9 @@ ActiveRecord::Schema.define(version: 20150809153803) do
   create_table "fansub_staffers", force: :cascade do |t|
     t.integer  "staffer_id"
     t.string   "fansub_id"
-    t.integer  "role"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "role",       default: 0
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   add_index "fansub_staffers", ["fansub_id"], name: "index_fansub_staffers_on_fansub_id", using: :btree
@@ -103,12 +103,12 @@ ActiveRecord::Schema.define(version: 20150809153803) do
     t.string   "title"
     t.string   "short_title"
     t.integer  "episodes_count"
-    t.integer  "status"
-    t.integer  "format"
+    t.integer  "status",           default: 0
+    t.integer  "format",           default: 0
     t.date     "started_at"
     t.date     "ended_at"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
   end
 
   add_index "shows", ["collaboration_id"], name: "index_shows_on_collaboration_id", using: :btree
