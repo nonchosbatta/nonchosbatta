@@ -35,6 +35,9 @@ gem 'animate-rails'
 # gem 'rmagick', require: false
 # gem 'carrierwave'
 
+# Validators
+gem 'validate_url'
+
 # Dalli
 gem 'connection_pool'
 gem 'dalli'
