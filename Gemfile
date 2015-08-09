@@ -14,6 +14,7 @@ gem 'puma'
 gem 'bundler-audit'
 gem 'goldiloader'
 gem 'non-stupid-digest-assets'
+gem 'mail', github: 'mikel/mail', branch: 'master' # mikel/mail/issues/803
 
 # Assets processing
 gem 'sass-rails',   '~> 5.0'
@@ -37,6 +38,9 @@ gem 'animate-rails'
 
 # Validators
 gem 'validate_url'
+
+# Admin
+gem 'rails_admin', github: 'sferik/rails_admin'
 
 # Dalli
 gem 'connection_pool'
