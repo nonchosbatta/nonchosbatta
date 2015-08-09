@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150809140907) do
+ActiveRecord::Schema.define(version: 20150809142945) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,24 @@ ActiveRecord::Schema.define(version: 20150809140907) do
 
   add_index "aliases", ["name"], name: "index_aliases_on_name", unique: true, using: :btree
   add_index "aliases", ["owner_id"], name: "index_aliases_on_owner_id", using: :btree
+
+  create_table "collaborations", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "collaborations", ["name"], name: "index_collaborations_on_name", unique: true, using: :btree
+
+  create_table "fansub_collaborations", force: :cascade do |t|
+    t.integer  "fansub_id"
+    t.integer  "collaboration_id"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  add_index "fansub_collaborations", ["collaboration_id"], name: "index_fansub_collaborations_on_collaboration_id", using: :btree
+  add_index "fansub_collaborations", ["fansub_id"], name: "index_fansub_collaborations_on_fansub_id", using: :btree
 
   create_table "fansub_staffers", force: :cascade do |t|
     t.integer  "staffer_id"
