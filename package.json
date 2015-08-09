@@ -1,17 +1,17 @@
 {
   "name": "nonchosbatta",
   "version": "1.0.0",
-  "description": "Backend for Nonchosbatta",
+  "description": "Backend for nonchosbatta",
   "main": "index.js",
   "homepage": "https://github.com/nonchosbatta",
   "repository": {
     "type": "git",
-    "url": "https://github.com/RoxasShadow/nonchosbatta.git"
+    "url": "https://github.com/nonchosbatta/nonchosbatta.git"
   },
   "author": "Giovanni Capuano",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mozestudio/xpass/issues"
+    "url": "https://github.com/nonchosbatta/nonchosbatta/issues"
   },
   "browserify": {
     "options": {

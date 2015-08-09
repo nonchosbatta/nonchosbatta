@@ -1,8 +1,8 @@
-role :app, %w{deployer@xxx.xxx.xxx.xxx}
-role :web, %w{deployer@xxx.xxx.xxx.xxx}
-role :db,  %w{deployer@xxx.xxx.xxx.xxx}
+role :app, %w{deployer@omnibox.omnivium.it}
+role :web, %w{deployer@omnibox.omnivium.it}
+role :db,  %w{deployer@omnibox.omnivium.it}
 
-server 'xxx.xxx.xxx.xxx', user: 'deployer', roles: %w{web app}
+server 'omnibox.omnivium.it', user: 'deployer', roles: %w{web app}
 
 set :branch, :staging
 set :rails_env, :staging

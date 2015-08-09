@@ -1,6 +1,6 @@
 lock '3.4.0'
 
-set :repo_url, 'git@github.com:RoxasShadow/nonchosbatta.git'
+set :repo_url, 'git@github.com:nonchosbatta/nonchosbatta.git'
 set :application, 'nonchosbatta'
 set :user, 'deployer'
 
