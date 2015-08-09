@@ -4,6 +4,8 @@ class User < ActiveRecord::Base
 
   validates :username, presence: true, uniqueness: true, length: { minimum: 3 }
 
+  has_many :aliases, foreign_key: 'owner_id'
+
   # Patch for RailsAdmin
   def name
     username
