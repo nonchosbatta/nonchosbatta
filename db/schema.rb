@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150809142945) do
+ActiveRecord::Schema.define(version: 20150809144148) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -66,6 +66,29 @@ ActiveRecord::Schema.define(version: 20150809142945) do
 
   add_index "fansubs", ["name"], name: "index_fansubs_on_name", unique: true, using: :btree
   add_index "fansubs", ["owner_id"], name: "index_fansubs_on_owner_id", using: :btree
+
+  create_table "shows", force: :cascade do |t|
+    t.integer  "fansub_id"
+    t.integer  "collaboration_id"
+    t.string   "title"
+    t.string   "short_title"
+    t.integer  "episodes_count"
+    t.integer  "status"
+    t.integer  "format"
+    t.date     "started_at"
+    t.date     "ended_at"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  add_index "shows", ["collaboration_id"], name: "index_shows_on_collaboration_id", using: :btree
+  add_index "shows", ["ended_at"], name: "index_shows_on_ended_at", using: :btree
+  add_index "shows", ["fansub_id"], name: "index_shows_on_fansub_id", using: :btree
+  add_index "shows", ["format"], name: "index_shows_on_format", using: :btree
+  add_index "shows", ["short_title"], name: "index_shows_on_short_title", using: :btree
+  add_index "shows", ["started_at"], name: "index_shows_on_started_at", using: :btree
+  add_index "shows", ["status"], name: "index_shows_on_status", using: :btree
+  add_index "shows", ["title"], name: "index_shows_on_title", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "username",               default: "", null: false

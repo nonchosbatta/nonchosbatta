@@ -12,7 +12,7 @@ class FansubStaffer < ActiveRecord::Base
   end
 
   def role_enum
-    Nonchosbatta::Fansub::ROLES
+    Nonchosbatta::Fansub::ROLES.map { |role| [role.humanize, role] }
   end
 
   def name

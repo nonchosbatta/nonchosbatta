@@ -38,6 +38,7 @@ gem 'animate-rails'
 
 # Validators
 gem 'validate_url'
+gem 'date_validator'
 
 # Admin
 gem 'rails_admin', github: 'sferik/rails_admin'

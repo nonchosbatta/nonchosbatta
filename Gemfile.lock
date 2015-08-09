@@ -123,6 +123,8 @@ GEM
     connection_pool (2.2.0)
     dalli (2.7.4)
     database_cleaner (1.4.1)
+    date_validator (0.8.1)
+      activemodel
     derailed (0.1.0)
       derailed_benchmarks
     derailed_benchmarks (1.0.1)
@@ -541,6 +543,7 @@ DEPENDENCIES
   connection_pool
   dalli
   database_cleaner
+  date_validator
   derailed
   devise
   factory_girl_rails

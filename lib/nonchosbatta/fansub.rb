@@ -1,5 +1,5 @@
 module Nonchosbatta
   class Fansub
-    ROLES = %w(Translator Editor Checker Timer Typesetter Encoder QChecker)
+    ROLES = %w(translator editor checker timer typesetter encoder qchecker)
   end
 end
