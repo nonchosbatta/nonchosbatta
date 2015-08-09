@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150809144148) do
+ActiveRecord::Schema.define(version: 20150809151239) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,24 @@ ActiveRecord::Schema.define(version: 20150809144148) do
   end
 
   add_index "collaborations", ["name"], name: "index_collaborations_on_name", unique: true, using: :btree
+
+  create_table "episodes", force: :cascade do |t|
+    t.integer  "show_id"
+    t.integer  "number"
+    t.string   "url"
+    t.integer  "translation"
+    t.integer  "editing"
+    t.integer  "checking"
+    t.integer  "timing"
+    t.integer  "typesetting"
+    t.integer  "encoding"
+    t.integer  "qchecking"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "episodes", ["number"], name: "index_episodes_on_number", using: :btree
+  add_index "episodes", ["show_id"], name: "index_episodes_on_show_id", using: :btree
 
   create_table "fansub_collaborations", force: :cascade do |t|
     t.integer  "fansub_id"
