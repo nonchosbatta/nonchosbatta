@@ -103,6 +103,7 @@ ActiveRecord::Schema.define(version: 20150809153803) do
   create_table "shows", force: :cascade do |t|
     t.integer  "fansub_id"
     t.integer  "collaboration_id"
+    t.integer  "fansub_alias_id"
     t.string   "title"
     t.string   "short_title"
     t.integer  "episodes_count"
@@ -116,6 +117,7 @@ ActiveRecord::Schema.define(version: 20150809153803) do
 
   add_index "shows", ["collaboration_id"], name: "index_shows_on_collaboration_id", using: :btree
   add_index "shows", ["ended_at"], name: "index_shows_on_ended_at", using: :btree
+  add_index "shows", ["fansub_alias_id"], name: "index_shows_on_fansub_alias_id", using: :btree
   add_index "shows", ["fansub_id"], name: "index_shows_on_fansub_id", using: :btree
   add_index "shows", ["format"], name: "index_shows_on_format", using: :btree
   add_index "shows", ["short_title"], name: "index_shows_on_short_title", using: :btree

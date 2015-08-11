@@ -1,5 +1,6 @@
 class Fansub < ActiveRecord::Base
   belongs_to :owner, class_name: 'User'
+  belongs_to :alias
 
   has_many :fansub_staffers, dependent: :destroy
   has_many :shows, dependent: :destroy

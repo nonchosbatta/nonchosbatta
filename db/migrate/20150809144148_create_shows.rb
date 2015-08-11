@@ -3,6 +3,7 @@ class CreateShows < ActiveRecord::Migration
     create_table :shows do |t|
       t.integer :fansub_id
       t.integer :collaboration_id
+      t.integer :fansub_alias_id
       t.string  :title
       t.string  :short_title
       t.integer :episodes_count
@@ -16,6 +17,7 @@ class CreateShows < ActiveRecord::Migration
 
     add_index :shows, :fansub_id
     add_index :shows, :collaboration_id
+    add_index :shows, :fansub_alias_id
     add_index :shows, :title
     add_index :shows, :short_title
     add_index :shows, :status
