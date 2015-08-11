@@ -1,6 +1,8 @@
 class Show < ActiveRecord::Base
+  # TODO: Make this polymorphic
   belongs_to :fansub
   belongs_to :collaboration
+  belongs_to :fansub_alias, class_name: 'Alias'
 
   has_many :episodes, dependent: :destroy
 
