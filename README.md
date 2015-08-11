@@ -1,7 +1,5 @@
-nonchosbatta
+nonchosbatta [![Codeship Status for nonchosbatta/nonchosbatta](https://codeship.com/projects/e9f61b10-2290-0133-705d-365560d2eeeb/status?branch=master)](https://codeship.com/projects/96207)
 ============
-
-[![Codeship Status for nonchosbatta/nonchosbatta](https://codeship.com/projects/e9f61b10-2290-0133-705d-365560d2eeeb/status?branch=master)](https://codeship.com/projects/96207)
 
 [Live demo](http://roxasfaggot.omnivium.it/admin)
 
