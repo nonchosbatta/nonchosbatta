@@ -17,14 +17,15 @@ ActiveRecord::Schema.define(version: 20150809153803) do
   enable_extension "plpgsql"
 
   create_table "aliases", force: :cascade do |t|
-    t.integer  "owner_id"
+    t.integer  "subject_id"
+    t.string   "subject_type"
     t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   add_index "aliases", ["name"], name: "index_aliases_on_name", unique: true, using: :btree
-  add_index "aliases", ["owner_id"], name: "index_aliases_on_owner_id", using: :btree
+  add_index "aliases", ["subject_type", "subject_id"], name: "index_aliases_on_subject_type_and_subject_id", using: :btree
 
   create_table "collaborations", force: :cascade do |t|
     t.string   "name"

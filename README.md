@@ -1,6 +1,8 @@
 nonchosbatta
 ============
 
+[Live demo](http://roxasfaggot.omnivium.it/admin)
+
 The goal
 --------
 The goal of nonchosbatta is creating an environment where you can find all the series your favorite fansubs are translating and being updated of the current status of each episode and so on.

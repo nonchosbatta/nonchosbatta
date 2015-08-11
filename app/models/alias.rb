@@ -1,6 +1,5 @@
 class Alias < ActiveRecord::Base
-  belongs_to :owner, class_name: 'User'
+  belongs_to :subject, polymorphic: true
 
-  validates :owner_id, presence: true
-  validates :name,     presence: true, uniqueness: true, length: { minimum: 3 }
+  validates :name, presence: true, uniqueness: true, length: { minimum: 3 }
 end
